@@ -53,4 +53,4 @@ Assigning Query to Agent GJYQ\
 Query for Tech,Sales,English : Using Method 3(Random Assign)\
 Assigning Query to Agent GJYQ\
 Query for Tech,Spanish,Sales : Using Method 3(Random Assign)\
-Assigning Query to Agent WQLE\
+Assigning Query to Agent WQLE

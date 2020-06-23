@@ -16,11 +16,10 @@ class Agent:
         return False
 
 def agent_assign(queue,Agents):
-
     for i in queue:
         suitable_agents=[x for x in filter(lambda a: a.checkroles(i[0].split(",")),Agents)]
         if len(suitable_agents)==0:
-            print("All suitable agents are busy right now for query "+i[0] )
+            print("All suitable agents are busy right now for query"+i[0])
             continue
         print("Query for "+i[0],end=" ")
         if i[1]=='1':
@@ -35,18 +34,23 @@ def agent_assign(queue,Agents):
             print(": Using Method 3(Random Assign)")
             random_agent=choice(suitable_agents)
             print("Assigning Query to Agent "+random_agent.name)
-
-if __name__=='__main__':
+if __name__=="__main__":
+    with open("testcase.txt","r") as file:
+        testcase=file.readlines()
     Agents=[]
     queue=[]
-    n=int(input())
-    q=int(input())
+    n=int(testcase[0].strip())
+    q=int(testcase[1].strip())
+    pointer=2
     for i in range(n):
-        agnt=input().split()
+        agnt=testcase[pointer].split()
         if agnt[1]=='True':
             Agents.append(Agent(agnt))
+        pointer+=1
     for i in range(q):
-        queue.append(input().split())
+        queue.append(testcase[pointer].split())
+        pointer+=1
+    #print(queue)
     if len(Agents)!=0:
         agent_assign(queue,Agents)
     else:

@@ -23,8 +23,8 @@ Please write a function that takes an input the list of agents with their data, 
 First Line Contains Number of Agents (n)\
 Second Line Contains Number of Queries(q)\
 n Line with Agent Details [name is_available available_for roles]\
-q Line with Query Detail [roles method(1,2,3)]\
-\
+q Line with Query Detail [roles method(1,2,3)]
+
 ## Sample Input
 4\
 4\
@@ -35,12 +35,12 @@ WQLE True 24 Tech,Spanish,Sales\
 Tech 1\
 Tech,Sales,English 1\
 Tech,Sales,English 3\
-Tech,Spanish,Sales 3\
+Tech,Spanish,Sales 3
 
 ### Note
 Method 1 - All Available\
 Method 2 - Least Busy\
-Method 3 - Random\
+Method 3 - Random
 ## How to run the code
 Use sales.py for manual entry of test case. Please only use the format given above\
 To generate test case use inputgenerator.py. This program will prompt for input for number of agents and number of queries. The output will be stored to testcase.txt, you can manually change the file but again please only use the format mentioned above.\

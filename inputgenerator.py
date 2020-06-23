@@ -9,7 +9,10 @@ tags=[]
 for i in range(n):
     agent_case=''.join(random.choice(string.ascii_uppercase) for i in range(4))
     agent_case+=" "+random.choice(["True","True","False"])+" "
-    agent_case+=str(random.randint(1,40))+" "
+    if "True" in agent_case:
+        agent_case+=str(random.randint(1,40))+" "
+    else:
+        agent_case+="0 "
     n_tags=random.randint(1,3)
     agent_tags=random.choice(salestags)+","
     for i in range(n_tags-1):

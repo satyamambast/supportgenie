@@ -35,6 +35,7 @@ def agent_assign(queue,Agents):
             print(": Using Method 3(Random Assign)")
             random_agent=choice(suitable_agents)
             print("Assigning Query to Agent "+random_agent.name)
+        print()
 
 if __name__=='__main__':
     Agents=[]
